@@ -1,13 +1,16 @@
 def main():
+    print()
+    print(f"Welcome to Tic Tac Toe")
+    print()
+    
     player= next_player("")
     board=create_board()
-    print(f"Welcome to Tic Tac Toe")
     while not (has_winner(board) or is_draw(board)):
         display_board(board)
         make_move(player, board)
         player = next_player(player)
     display_board(board)
-    print("Good game. Thanks for playing!") 
+    print(f"Good game. Thanks for playing!") 
 
 def create_board():
     board = []
